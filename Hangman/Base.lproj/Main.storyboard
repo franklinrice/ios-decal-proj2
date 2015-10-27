@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hangman View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HangmanViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hangman1.gif" translatesAutoresizingMaskIntoConstraints="NO" id="xHk-Qo-cLF">
+                                <rect key="frame" x="212" y="20" width="176" height="141"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="aDr-h8-l9e"/>
+                                    <constraint firstAttribute="width" secondItem="xHk-Qo-cLF" secondAttribute="height" multiplier="5:4" id="zu6-Sm-3UF"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="aDr-h8-l9e"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4US-Kv-XBO">
+                                <rect key="frame" x="471" y="20" width="109" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="NewGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gyi-HI-Ly9"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j1u-AO-AOI">
+                                <rect key="frame" x="145" y="378" width="311" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="j1u-AO-AOI" secondAttribute="height" multiplier="1:1" id="bIN-PS-16C"/>
+                                    <constraint firstAttribute="height" constant="202" id="yCl-8Y-bFc"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="yCl-8Y-bFc"/>
+                                    </mask>
+                                </variation>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Unsuccessful Guesses" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOW-36-hAh">
+                                <rect key="frame" x="20" y="320" width="560" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFc-RW-OFZ">
+                                <rect key="frame" x="20" y="349" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNl-3V-aQo">
+                                <rect key="frame" x="496" y="464" width="57" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="guessButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aDi-kR-p0d"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccp-7M-kNf">
+                                <rect key="frame" x="20" y="184" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77647066116333008" green="0.91764712333679199" blue="0.94509810209274292" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZFc-RW-OFZ" firstAttribute="top" secondItem="QOW-36-hAh" secondAttribute="bottom" constant="8" id="46k-c7-Ezq"/>
+                            <constraint firstItem="4US-Kv-XBO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4F9-km-kBs"/>
+                            <constraint firstItem="xHk-Qo-cLF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="5:17" id="54a-76-P4L"/>
+                            <constraint firstItem="QOW-36-hAh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="641-ak-H9W"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DNl-3V-aQo" secondAttribute="trailing" constant="27" id="CCg-tg-OS9"/>
+                            <constraint firstItem="Ccp-7M-kNf" firstAttribute="top" secondItem="xHk-Qo-cLF" secondAttribute="bottom" constant="23" id="Fwm-4l-rvw"/>
+                            <constraint firstItem="j1u-AO-AOI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="HfS-Bm-2NZ"/>
+                            <constraint firstItem="Ccp-7M-kNf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J3e-A8-IRt"/>
+                            <constraint firstItem="ZFc-RW-OFZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JL8-YN-xOj"/>
+                            <constraint firstItem="ZFc-RW-OFZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NJ3-Q7-ylv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="j1u-AO-AOI" secondAttribute="bottom" constant="20" id="QTf-EC-1LE"/>
+                            <constraint firstItem="j1u-AO-AOI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WO8-Qz-uZ6"/>
+                            <constraint firstItem="xHk-Qo-cLF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dLl-RO-f2n"/>
+                            <constraint firstItem="xHk-Qo-cLF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dh0-i5-reg"/>
+                            <constraint firstItem="DNl-3V-aQo" firstAttribute="centerY" secondItem="j1u-AO-AOI" secondAttribute="centerY" id="e9q-Q3-4nY"/>
+                            <constraint firstItem="Ccp-7M-kNf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="232" id="i7f-c0-kLZ"/>
+                            <constraint firstItem="j1u-AO-AOI" firstAttribute="top" secondItem="Ccp-7M-kNf" secondAttribute="bottom" constant="105" id="jPx-bk-zSr"/>
+                            <constraint firstItem="j1u-AO-AOI" firstAttribute="top" secondItem="ZFc-RW-OFZ" secondAttribute="bottom" constant="8" id="kDg-Le-5Rz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4US-Kv-XBO" secondAttribute="trailing" id="phK-kp-hHz"/>
+                            <constraint firstItem="QOW-36-hAh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="300" id="tMD-9K-ruB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="i7f-c0-kLZ"/>
+                                <exclude reference="tMD-9K-ruB"/>
+                                <exclude reference="jPx-bk-zSr"/>
+                                <exclude reference="kDg-Le-5Rz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="guessButton" destination="DNl-3V-aQo" id="6bp-sv-IaZ"/>
+                        <outlet property="image" destination="xHk-Qo-cLF" id="9yb-g8-79l"/>
+                        <outlet property="newGame" destination="4US-Kv-XBO" id="hqQ-o7-JZC"/>
+                        <outlet property="picker" destination="j1u-AO-AOI" id="pQt-ia-80H"/>
+                        <outlet property="unsuccessfulGuesses" destination="ZFc-RW-OFZ" id="fbv-Nk-d01"/>
+                        <outlet property="word" destination="Ccp-7M-kNf" id="4cg-Nj-Qd4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="317"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hangman1.gif" width="100" height="100"/>
+    </resources>
+</document>
